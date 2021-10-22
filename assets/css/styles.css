@@ -45,7 +45,6 @@ body {
 
 header h1 {
     float: left;
-    position: relative;
     padding: 25px 100px;
     margin:  25px 100px;
     text-transform: uppercase;
@@ -64,18 +63,24 @@ header #nav-header li {
     display: inline-block;
 }
 
+
 header #nav-header li a {
     text-decoration: none;
     text-transform: uppercase;
     color: #000;
 }
 
-header #nav-header li a:hover{
-    color: #c1c1c1;
+#nav-header ul li:nth-child(1) > a:hover{
+    color: black
 }
 
+header #nav-header li a:hover{
+  color: #c1c1c1;
+} 
+
+
 header #nav-header li:first-child {
-    text-decoration: underline;
+    border-bottom: 3px solid #000; 
 }
 
 header #nav-header li:nth-child(1),
@@ -97,7 +102,7 @@ main #img-menu{
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 110px 0;
+    margin: 50px 0 100px 0;
 }
 
 main #img-menu img{
@@ -107,3 +112,66 @@ main #img-menu img{
     object-fit: cover;
     width: 200px; 
 }
+
+main h2 span {
+  color:cadetblue;
+}
+
+main #img-menu .container {
+  display: inline-flex;
+}
+main #img-menu .container .estatico {
+  color: #000;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+
+main #img-menu .dinamico {
+margin: 0;
+padding-left: 10px;
+height: 40px;
+line-height: ;
+overflow: hidden;
+}
+
+main #img-menu .dinamico li {
+  color: crimson;
+  list-style: none;
+  font-size: 30px;
+  font-weight: 400;
+  animation: slide 6s steps(4) infinite;
+  left: 0;
+  top: 0;
+  position: relative;
+  
+}
+
+@keyframes slide {
+  100% {
+    top: -180px;
+  }
+}
+
+main #img-menu .dinamico li span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  border-left: 2px solid crimson;
+  animation: typing 1.5s steps(9) infinite;
+  background: #FFF;
+}
+
+main #img-menu .dinamico li span {
+  position: relative;
+}
+
+@keyframes typing{
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+
