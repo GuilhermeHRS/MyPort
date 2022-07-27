@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+@import url("http://fonts.cdnfonts.com/css/roboto");
+.break {
+  flex-basis: 100%;
+  width: 0;
+}
+
 html,
 body {
   margin: 0;
@@ -126,7 +132,7 @@ header #nav-header {
 #menu1 {
   background: rgb(0, 0, 0);
   background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(17, 17, 17) 50%, rgb(0, 0, 0) 100%);
-  height: 86vh;
+  height: 90vh;
 }
 
 main #img-menu {
@@ -219,24 +225,115 @@ main #img-menu .dinamico li span {
   position: relative;
 }
 
-/*================================= ABOUT MENU ======================*/
-h1 {
-  text-align: center;
-  padding-bottom: 30px;
-  color: rgb(255, 255, 255);
-}
-
+/*================================= MENU 2 ======================*/
 #menu2 {
   background-color: #0e0c0c;
+  padding: 100px;
+}
+#menu2 .separator1 {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#menu2 .separator1 h1 {
+  color: #fff;
+}
+#menu2 .separator1 .hr1 {
+  margin: 0 auto 2px auto;
+  width: 100px;
+  border: 1px solid #6e0193;
+  background-color: #6e0193;
+}
+#menu2 .separator1 .hr2 {
+  margin: 0 auto 0 auto;
+  width: 50px;
+  border: 1px solid #6e0193;
+  background-color: #6e0193;
+}
+#menu2 .about {
+  display: block;
+  margin: 60px 20px 30px 20px;
+}
+#menu2 .about p {
+  font-family: "Roboto", sans-serif;
+  color: #c1c1c1;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+#menu2 .about span {
+  color: #9933FF;
+  font-size: 1.8rem;
+}
+#menu2 #personal-section {
+  margin: 60px 20px;
+  display: flex;
+}
+#menu2 #personal-section h1 {
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #b5b3b3, 2px 2px 2px rgba(206, 89, 55, 0);
+}
+#menu2 #personal-section .personal {
+  color: white;
+  width: 50%;
+  display: block;
+}
+#menu2 #personal-section .personal .wrap {
+  word-wrap: break-word;
+  margin-bottom: 12px;
+}
+#menu2 #personal-section .personal .wrap label {
+  margin-right: 45px;
+  color: #a90fcc;
+  font-weight: 500;
+}
+#menu2 #personal-section .interest {
+  color: white;
+  width: 50%;
+}
+#menu2 #personal-section .interest .interest-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+#menu2 #personal-section .interest .interest-cards span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #692094, #9d10d9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#menu2 #personal-section .interest .interest-cards .cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 30px 15px 0;
+  background-color: #222222;
+  width: 80px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/*================================= MENU 3 ======================*/
+#menu3 {
+  background-color: #070707;
   padding: 60px;
 }
-#menu2 .container-cards {
+#menu3 h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(255, 255, 255);
+}
+#menu3 .tools-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-#menu2 .container-cards .cards {
+#menu3 .tools-cards .cards {
   margin: 25px;
   display: flex;
   flex-direction: column;
@@ -249,26 +346,26 @@ h1 {
   max-height: 300px;
   box-shadow: 1px 1px 8px 1px #6e0193;
 }
-#menu2 .container-cards .cards .icon {
+#menu3 .tools-cards .cards .icon {
   height: 64px;
   width: 64px;
 }
-#menu2 .container-cards .cards img {
+#menu3 .tools-cards .cards img {
   width: 100%;
 }
-#menu2 .container-cards .cards h3 {
+#menu3 .tools-cards .cards h3 {
   color: #9933FF;
   font-size: 100%;
   margin-top: 8px;
 }
-#menu2 .container-cards .cards span {
+#menu3 .tools-cards .cards span {
   color: #c1c1c1;
   font-size: 0.9em;
   font-weight: 300;
   max-width: 240px;
   margin: 16px 10px;
 }
-#menu2 .container-cards .cards button {
+#menu3 .tools-cards .cards button {
   padding: 0.5rem 1rem;
   text-transform: uppercase;
   border-radius: 30px;
@@ -278,19 +375,19 @@ h1 {
   color: #fff;
   font-weight: 500;
 }
-#menu2 .container-cards .cards .html {
+#menu3 .tools-cards .cards .html {
   background: linear-gradient(to right, #f91919, #ff9575);
 }
-#menu2 .container-cards .cards .css {
+#menu3 .tools-cards .cards .css {
   background: linear-gradient(to right, #1225cd, #a7b3f2);
 }
-#menu2 .container-cards .cards .js {
+#menu3 .tools-cards .cards .js {
   background: linear-gradient(to right, #e1bf00, #b6b15b);
 }
-#menu2 .container-cards .cards .sass {
+#menu3 .tools-cards .cards .sass {
   background: linear-gradient(to right, #b00393, #ce6fb4);
 }
-#menu2 .container-cards .cards .react {
+#menu3 .tools-cards .cards .react {
   background: linear-gradient(to right, #008fc3, #61c0d8);
 }
 
@@ -299,10 +396,20 @@ h1 {
     background-color: #121212;
   }
 }
+@media screen and (max-width: 1200px) {
+  #personal-section {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
 @media screen and (max-width: 640px) {
   header #nav-header li {
     display: block;
     margin: 5px;
+  }
+  .about {
+    justify-content: center;
+    text-align: center;
   }
 }
 
