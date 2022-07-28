@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 @import url("http://fonts.cdnfonts.com/css/roboto");
-.break {
-  flex-basis: 100%;
-  width: 0;
-}
-
 html,
 body {
   margin: 0;
@@ -253,7 +248,7 @@ main #img-menu .dinamico li span {
 }
 #menu2 .about {
   display: block;
-  margin: 60px 20px 30px 20px;
+  margin: 60px 0px 50px 0px;
 }
 #menu2 .about p {
   font-family: "Roboto", sans-serif;
@@ -266,34 +261,40 @@ main #img-menu .dinamico li span {
   font-size: 1.8rem;
 }
 #menu2 #personal-section {
-  margin: 60px 20px;
   display: flex;
 }
 #menu2 #personal-section h1 {
-  margin-bottom: 10px;
   text-shadow: 0 0 5px #b5b3b3, 2px 2px 2px rgba(206, 89, 55, 0);
 }
 #menu2 #personal-section .personal {
+  display: flex;
+  flex-flow: column wrap;
   color: white;
   width: 50%;
-  display: block;
+  float: left;
 }
-#menu2 #personal-section .personal .wrap {
+#menu2 #personal-section .personal .personal-cards {
+  display: block;
+  flex-direction: column;
   word-wrap: break-word;
   margin-bottom: 12px;
 }
-#menu2 #personal-section .personal .wrap label {
-  margin-right: 45px;
+#menu2 #personal-section .personal .personal-cards label {
   color: #a90fcc;
   font-weight: 500;
+}
+#menu2 #personal-section .personal span {
+  display: block;
+  color: white;
 }
 #menu2 #personal-section .interest {
   color: white;
   width: 50%;
 }
 #menu2 #personal-section .interest .interest-cards {
+  max-width: 400px;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
 #menu2 #personal-section .interest .interest-cards span {
   font-size: 0.8rem;
@@ -305,12 +306,13 @@ main #img-menu .dinamico li span {
   -webkit-text-fill-color: transparent;
 }
 #menu2 #personal-section .interest .interest-cards .cards {
+  margin-right: 7px;
+  margin-bottom: 7px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0 30px 15px 0;
   background-color: #222222;
   width: 80px;
   padding: 15px;
@@ -398,18 +400,82 @@ main #img-menu .dinamico li span {
 }
 @media screen and (max-width: 1200px) {
   #personal-section {
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: inline;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 700px) {
   header #nav-header li {
     display: block;
     margin: 5px;
   }
-  .about {
+  #personal-section {
+    width: auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: flex;
+    align-items: start;
+  }
+  #personal-section h1 {
+    width: 200px;
+    margin-bottom: 4vh;
+  }
+}
+@media screen and (max-width: 548px) {
+  #personal-section {
+    width: auto;
+    justify-content: start;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  #personal-section h1 {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+  }
+  #personal-section .personal {
+    width: 100% !important;
+  }
+  #personal-section .interest {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 373px) {
+  .about span {
+    margin-top: 0 4vh;
+    font-size: 1rem;
+  }
+  .about p {
+    font-size: 0.8rem;
+  }
+  #personal-section {
+    width: auto;
     justify-content: center;
-    text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  #personal-section h1 {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+  }
+  #personal-section .personal {
+    width: 100% !important;
+  }
+  #personal-section .interest {
+    width: 100% !important;
+  }
+  #personal-section .interest .cards {
+    width: 100% !important;
+  }
+  button {
+    padding: 0.2rem 0.7rem;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: 0;
+    margin: 15px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
   }
 }
 
