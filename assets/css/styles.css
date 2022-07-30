@@ -34,8 +34,10 @@ button,
 }
 
 p {
-  margin-inline-start: 0;
-  margin-inline-end: 0;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
   margin: 0;
   padding: 0;
 }
@@ -145,7 +147,8 @@ main #img-menu img {
   background-color: #ddd;
   border-radius: 100%;
   height: 200px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 190px;
   margin: 80px 10px 40px 10px;
   border: 3px solid #3c0147;
@@ -188,10 +191,17 @@ main #img-menu .dinamico li {
   list-style: none;
   font-size: 20px;
   font-weight: 400;
-  animation: slide 6s steps(4) infinite;
+  -webkit-animation: slide 6s steps(4) infinite;
+          animation: slide 6s steps(4) infinite;
   left: 0;
   top: 0;
   position: relative;
+}
+
+@-webkit-keyframes slide {
+  100% {
+    top: -120.7px;
+  }
 }
 
 @keyframes slide {
@@ -206,8 +216,16 @@ main #img-menu .dinamico li span::after {
   height: 100%;
   left: 0;
   border-left: 2px solid #9933FF;
-  animation: typing 1.5s steps(8) infinite;
+  -webkit-animation: typing 1.5s steps(8) infinite;
+          animation: typing 1.5s steps(8) infinite;
   background: rgb(11, 11, 11);
+}
+
+@-webkit-keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -32px 0 32px;
+  }
 }
 
 @keyframes typing {
@@ -393,6 +411,36 @@ main #img-menu .dinamico li span {
   background: linear-gradient(to right, #008fc3, #61c0d8);
 }
 
+footer #copyright {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+footer .footer-container {
+  padding: 3vh;
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+}
+footer .footer-container .footer-divider {
+  padding: 5px;
+  width: 400px;
+}
+footer .footer-container .footer-divider h3 {
+  padding-left: 7px;
+  margin-bottom: 10px;
+}
+footer .footer-container .footer-divider .cards {
+  background-color: #FFF;
+  display: flex;
+}
+footer .footer-container .footer-divider .cards .icon {
+  margin-right: 10px;
+}
+footer .footer-container .footer-divider .cards .icon i {
+  font-size: 40px;
+}
+
 @media (min-width: 1500px) and (max-width: 1879px) {
   main #img-menu .dinamico li span::after {
     background-color: #121212;
@@ -417,7 +465,7 @@ main #img-menu .dinamico li span {
   }
   #personal-section h1 {
     width: 200px;
-    margin-bottom: 4vh;
+    margin-bottom: 2vh;
   }
 }
 @media screen and (max-width: 548px) {
@@ -477,6 +525,4 @@ main #img-menu .dinamico li span {
     color: #fff;
     font-weight: 500;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
